@@ -1,0 +1,145 @@
+[
+  {
+    "description": "",
+    "elements": [
+      {
+        "description": "",
+        "id": "login;login-with-valid-credentials",
+        "keyword": "Scenario",
+        "line": 3,
+        "name": "login with valid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1615728299
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 4,
+            "name": "user is on login page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1885559900
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 5,
+            "name": "user enters valid credentials",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:10"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1610794100
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 6,
+            "name": "user navigates to dashboard page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:19"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 63161900
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 510264300
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "id": "login;login-with-invalid-credentials",
+        "keyword": "Scenario",
+        "line": 8,
+        "name": "login with invalid credentials",
+        "steps": [
+          {
+            "keyword": "Before",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 1450613999
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Given ",
+            "line": 9,
+            "name": "user is on login page",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:5"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 1857872600
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 10,
+            "name": "user enters invalid credentials",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:23"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 302390500
+            }
+          },
+          {
+            "arguments": [],
+            "keyword": "Then ",
+            "line": 11,
+            "name": "error messege should be displayed",
+            "match": {
+              "location": "src\\steps\\login.steps.ts:30"
+            },
+            "result": {
+              "status": "passed",
+              "duration": 16275299
+            }
+          },
+          {
+            "keyword": "After",
+            "hidden": true,
+            "result": {
+              "status": "passed",
+              "duration": 482939099
+            }
+          }
+        ],
+        "tags": [],
+        "type": "scenario"
+      }
+    ],
+    "id": "login",
+    "line": 1,
+    "keyword": "Feature",
+    "name": "Login",
+    "tags": [],
+    "uri": "features\\login.feature"
+  }
+]
