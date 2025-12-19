@@ -16,6 +16,8 @@ import { Page, expect } from '@playwright/test';
 
   async navigate() {
     await this.page.goto('https://practicetestautomation.com/practice-test-login/',{
+      waitUntil: 'networkidle',
+      timeout: 60000
       
     });
   }
