@@ -4,6 +4,7 @@ import mydata from '../testdata/mydata.json';
 
 Given('user is on login page', async function (this: CustomWorld) {
   await this.loginPage.navigate();
+  await this.page.waitForTimeout(10000);
   
 });
 
