@@ -9,7 +9,7 @@ export class CustomWorld {
   loginPage!: LoginPage;
 
   async init() {
-    this.browser = await chromium.launch({ headless: false,args: ['--disable-web-security', '--disable-features=IsolateOrigins'] });
+    this.browser = await chromium.launch({ headless: true,args: ['--disable-web-security', '--disable-features=IsolateOrigins'] });
     this.context = await this.browser.newContext();
     this.page = await this.context.newPage();
 
