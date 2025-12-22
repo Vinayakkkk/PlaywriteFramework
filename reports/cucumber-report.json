@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1602651799
+              "duration": 602982000
             }
           },
           {
@@ -27,7 +27,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2181227700
+              "duration": 12951860600
             }
           },
           {
@@ -36,11 +36,11 @@
             "line": 5,
             "name": "user enters valid credentials",
             "match": {
-              "location": "src\\steps\\login.steps.ts:10"
+              "location": "src\\steps\\login.steps.ts:11"
             },
             "result": {
               "status": "passed",
-              "duration": 886597299
+              "duration": 866645099
             }
           },
           {
@@ -49,11 +49,11 @@
             "line": 6,
             "name": "user navigates to dashboard page",
             "match": {
-              "location": "src\\steps\\login.steps.ts:19"
+              "location": "src\\steps\\login.steps.ts:20"
             },
             "result": {
               "status": "passed",
-              "duration": 80446099
+              "duration": 433567999
             }
           },
           {
@@ -61,7 +61,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 403602100
+              "duration": 140018199
             }
           }
         ],
@@ -80,7 +80,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 1286725099
+              "duration": 531646600
             }
           },
           {
@@ -93,7 +93,7 @@
             },
             "result": {
               "status": "passed",
-              "duration": 2055961599
+              "duration": 12779077100
             }
           },
           {
@@ -102,11 +102,11 @@
             "line": 10,
             "name": "user enters invalid credentials",
             "match": {
-              "location": "src\\steps\\login.steps.ts:23"
+              "location": "src\\steps\\login.steps.ts:24"
             },
             "result": {
               "status": "passed",
-              "duration": 172641200
+              "duration": 182370199
             }
           },
           {
@@ -115,11 +115,11 @@
             "line": 11,
             "name": "error messege should be displayed",
             "match": {
-              "location": "src\\steps\\login.steps.ts:30"
+              "location": "src\\steps\\login.steps.ts:31"
             },
             "result": {
               "status": "passed",
-              "duration": 13074500
+              "duration": 14947599
             }
           },
           {
@@ -127,7 +127,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 354197200
+              "duration": 119062100
             }
           }
         ],

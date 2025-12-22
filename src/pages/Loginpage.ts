@@ -1,19 +1,15 @@
 import { Page, expect } from '@playwright/test';
+import { pageelements } from '../pages/elements/pageelements';
 
   export class LoginPage {
   private page: Page;
+  private elements: pageelements;
 
   constructor(page: Page) {
     this.page = page;
+    this.elements = new pageelements(page);
   }
   
-
-  private usernameInput= () =>this.page.locator('#username')
-  private passwordInput= () =>this.page.locator('#password')
-  private loginButton = () => this.page.locator('#submit');
-  private errorMessage = () => this.page.locator('#error');
-  private dashboardHeader = ()=> this.page.locator('//h1[normalize-space()="Logged In Successfully"]');
-
   async navigate() {
     await this.page.goto('https://practicetestautomation.com/practice-test-login/',{
       waitUntil: 'networkidle',
@@ -23,16 +19,16 @@ import { Page, expect } from '@playwright/test';
   }
 
    async login(username: string, password: string) {
-    await this.usernameInput().fill(username);
-    await this.passwordInput().fill(password);
-    await this.loginButton().click();
+    await this.elements.usernameInput.fill(username);
+    await this.elements.passwordInput.fill(password);
+    await this.elements.loginButton.click();
   }
 
    async verifyDashboard() {
-    await expect(this.dashboardHeader()).toHaveText('Logged In Successfully');
+    await expect(this.elements.dashboardHeader).toHaveText('Logged In Successfully');
   }
 
   async verifyInvalidLoginMessage() {
-    await expect(this.errorMessage()).toContainText('Your username is invalid!');
+    await expect(this.elements.errorMessage).toContainText('Your username is invalid!');
   }
 }
