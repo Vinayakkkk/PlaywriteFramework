@@ -14,7 +14,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 602982000
+              "duration": 2730178299
             }
           },
           {
@@ -26,8 +26,9 @@
               "location": "src\\steps\\login.steps.ts:5"
             },
             "result": {
-              "status": "passed",
-              "duration": 12951860600
+              "status": "failed",
+              "duration": 5008074899,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Vinayak R Hanagi\\Documents\\playframe\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
             }
           },
           {
@@ -39,8 +40,8 @@
               "location": "src\\steps\\login.steps.ts:11"
             },
             "result": {
-              "status": "passed",
-              "duration": 866645099
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -52,8 +53,8 @@
               "location": "src\\steps\\login.steps.ts:20"
             },
             "result": {
-              "status": "passed",
-              "duration": 433567999
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -61,7 +62,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 140018199
+              "duration": 74106699
             }
           }
         ],
@@ -80,7 +81,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 531646600
+              "duration": 276489900
             }
           },
           {
@@ -92,8 +93,9 @@
               "location": "src\\steps\\login.steps.ts:5"
             },
             "result": {
-              "status": "passed",
-              "duration": 12779077100
+              "status": "failed",
+              "duration": 5005120500,
+              "error_message": "Error: function timed out, ensure the promise resolves within 5000 milliseconds\n    at Timeout.<anonymous> (C:\\Users\\Vinayak R Hanagi\\Documents\\playframe\\node_modules\\@cucumber\\cucumber\\src\\time.ts:52:14)\n    at listOnTimeout (node:internal/timers:588:17)\n    at processTimers (node:internal/timers:523:7)"
             }
           },
           {
@@ -105,8 +107,8 @@
               "location": "src\\steps\\login.steps.ts:24"
             },
             "result": {
-              "status": "passed",
-              "duration": 182370199
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -118,8 +120,8 @@
               "location": "src\\steps\\login.steps.ts:31"
             },
             "result": {
-              "status": "passed",
-              "duration": 14947599
+              "status": "skipped",
+              "duration": 0
             }
           },
           {
@@ -127,7 +129,7 @@
             "hidden": true,
             "result": {
               "status": "passed",
-              "duration": 119062100
+              "duration": 63868699
             }
           }
         ],

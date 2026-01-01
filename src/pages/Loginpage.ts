@@ -11,10 +11,22 @@ export class LoginPage {
   }
   
   async navigate() {
-    await this.page.goto('https://practicetestautomation.com/practice-test-login/', {
-      waitUntil: 'networkidle',
-      timeout: 60000
-    });
+    try {
+      // Set default timeout to 30 seconds for this navigation
+      this.page.setDefaultTimeout(30000);
+      
+      await this.page.goto('https://practicetestautomation.com/practice-test-login/', {
+        waitUntil: 'domcontentloaded',
+        timeout: 30000
+      });
+      
+      // Wait for username field to be visible as an additional check
+      await this.elements.usernameInput.waitFor({ state: 'visible', timeout: 10000 });
+    } catch (error: unknown) {
+      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
+      console.error('Failed to navigate to login page:', errorMessage);
+      throw new Error(`Navigation failed: ${errorMessage}`);
+    }
   }
 
   async login(username: string, password: string) {
