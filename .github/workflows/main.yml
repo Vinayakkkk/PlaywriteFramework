@@ -17,7 +17,7 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: 22
+          node-version: 20
 
       - name: Install Dependencies
         run: npm ci
@@ -39,7 +39,34 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: cucumber-report
-          path: reports
+          path: reports/
+
+      - name: Send Email with Report Link
+        if: always()
+        uses: dawidd6/action-send-mail@v3
+        with:
+          server_address: smtp.gmail.com
+          server_port: 587
+          username: ${{ secrets.EMAIL_USERNAME }}
+          password: ${{ secrets.EMAIL_PASSWORD }}
+          subject: "Playwright Automation Report - GitHub Actions"
+          to: vinayakhanagi12@email.com
+          from: GitHub Actions
+          body: |
+            Hi Team,
+
+            Playwright + Cucumber automation execution is completed.
+
+            Repository: ${{ github.repository }}
+            Branch: ${{ github.ref_name }}
+            Job Status: ${{ job.status }}
+
+            Download the HTML report from the link below:
+            https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }}
+
+            Regards,
+            Automation Framework
+
 
 
       
