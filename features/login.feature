@@ -8,7 +8,7 @@ Feature: Login
     Scenario: login with invalid credentials
     Given user is on login page
     Then user enters invalid credentials
-    Then error messege should be displayed
+    Then error message should be displayed
 
 
     

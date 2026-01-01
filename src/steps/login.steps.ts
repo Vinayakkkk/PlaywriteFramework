@@ -28,7 +28,7 @@ When('user enters invalid credentials', async function (this: CustomWorld) {
   );
 });
 
-Then('error messege should be displayed', async function (this: CustomWorld) {
+Then('error message should be displayed', async function (this: CustomWorld) {
   await this.loginPage.verifyInvalidLoginMessage();
 });
 

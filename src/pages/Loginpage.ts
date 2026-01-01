@@ -12,20 +12,20 @@ export class LoginPage {
   
   async navigate() {
     try {
-      // Set default timeout to 30 seconds for this navigation
+      // Set a longer timeout for the page load
       this.page.setDefaultTimeout(30000);
       
+      // Navigate to the page
       await this.page.goto('https://practicetestautomation.com/practice-test-login/', {
         waitUntil: 'domcontentloaded',
         timeout: 30000
       });
-      
-      // Wait for username field to be visible as an additional check
+
+      // Wait for a key element to be visible
       await this.elements.usernameInput.waitFor({ state: 'visible', timeout: 10000 });
-    } catch (error: unknown) {
-      const errorMessage = error instanceof Error ? error.message : 'Unknown error occurred';
-      console.error('Failed to navigate to login page:', errorMessage);
-      throw new Error(`Navigation failed: ${errorMessage}`);
+    } catch (error) {
+      console.error('Navigation error:', error);
+      throw error;
     }
   }
 
