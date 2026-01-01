@@ -1,20 +1,13 @@
-import { Page, expect, Locator } from '@playwright/test';
+import { Page, expect } from '@playwright/test';
+import { pageelements } from '../pages/elements/pageelements';
 
 export class LoginPage {
-  // Locators
-  private readonly usernameInput: Locator;
-  private readonly passwordInput: Locator;
-  private readonly loginButton: Locator;
-  private readonly errorMessage: Locator;
-  private readonly dashboardHeader: Locator;
+  private page: Page;
+  private elements: pageelements;
 
-  constructor(private readonly page: Page) {
-    // Initialize locators in constructor
-    this.usernameInput = page.locator('input[name="username"]');
-    this.passwordInput = page.locator('input[name="password"]');
-    this.loginButton = page.locator('#submit');
-    this.errorMessage = page.locator('#error');
-    this.dashboardHeader = page.locator('.post-title');
+  constructor(page: Page) {
+    this.page = page;
+    this.elements = new pageelements(page);
   }
   
   async navigate() {
@@ -25,16 +18,16 @@ export class LoginPage {
   }
 
   async login(username: string, password: string) {
-    await this.usernameInput.fill(username);
-    await this.passwordInput.fill(password);
-    await this.loginButton.click();
+    await this.elements.usernameInput.fill(username);
+    await this.elements.passwordInput.fill(password);
+    await this.elements.loginButton.click();
   }
 
   async verifyDashboard() {
-    await expect(this.dashboardHeader).toHaveText('Logged In Successfully');
+    await expect(this.elements.dashboardHeader).toHaveText('Logged In Successfully');
   }
 
   async verifyInvalidLoginMessage() {
-    await expect(this.errorMessage).toContainText('Your username is invalid!');
+    await expect(this.elements.errorMessage).toContainText('Your username is invalid!');
   }
 }
