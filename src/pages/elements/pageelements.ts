@@ -7,7 +7,6 @@ export class pageelements {
     this.page = page;
   }
 
-  // Login form elements
   get usernameInput(): Locator {
     return this.page.locator('input[name="username"]');
   }
@@ -20,7 +19,6 @@ export class pageelements {
     return this.page.locator('#submit');
   }
 
-  // Messages & navigation
   get errorMessage(): Locator {
     return this.page.locator('#error');
   }
