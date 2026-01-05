@@ -19,6 +19,7 @@ export class LoginPage {
       await this.page.goto('https://practicetestautomation.com/practice-test-login/', {
         waitUntil: 'domcontentloaded',
         timeout: 30000
+        
       });
 
       // Wait for a key element to be visible
