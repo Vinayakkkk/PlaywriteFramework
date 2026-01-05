@@ -48,7 +48,7 @@ jobs:
           server_address: smtp.gmail.com
           server_port: 587
           username: vinayakhanagi1234@gmail.com
-          password: Ka26y1698@
+          password: esbc eijt oevn csgs
           subject: "Playwright Automation Report - GitHub Actions"
           to: vinayakhanagi12@email.com
           from: GitHub Actions
